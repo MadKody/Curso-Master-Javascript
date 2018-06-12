@@ -54,8 +54,9 @@ OR: ||
 Negacion: !
 */
 
-//Negacion
-var year = 2018;
+//NEGACION
+var year = 2017;
+
 if(year !=2016){
     console.log("El anio no es el 2016, realmente es "+year);
 }
@@ -65,5 +66,9 @@ if(year >=2000 && year <= 2020){
     console.log("Estamos en la era actual");
 }
 
-
-
+// OR: ||
+if(year == 2008 || (year >=2018 && year ==2028)){
+    console.log("El anio acaba en 8");
+}else{
+    console.log("anio no registrado");
+}
