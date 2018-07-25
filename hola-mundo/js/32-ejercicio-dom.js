@@ -14,6 +14,26 @@ window.addEventListener('load', function(){
         var apellidos = document.querySelector('#apellidos').value;
         var edad = document.querySelector('#edad').value;
 
+        // Or para pegar ||
+        //nombre no contiene espacios por delante ni por detras
+        if(nombre.trim() == null || nombre.length == 0){
+            alert("El nombre no es valido");
+            document.querySelector("#error_nombre").innerHTML ="El nombre no es valido";
+            return false;
+        }else{
+            document.querySelector("#error_nombre").style.display = "none";
+        }
+
+        if(apellidos.trim() == null || apellidos.length == 0){
+            alert("Los apellidos no es valido");
+            return false;
+        }
+
+        if(edad == null || edad <= 0 || isNaN(edad)){
+            alert("La edad no es valido");
+            return false;
+        }
+
         box_dashed.style.display = "block";
         
         //Opcion para dar salida a los datos en el formulario 
@@ -28,6 +48,9 @@ window.addEventListener('load', function(){
         }
         */
        //Mas limpio
+
+        
+
         var p_nombre = document.querySelector("#p_nombre span");
         var p_apellidos = document.querySelector("#p_apellidos span");
         var p_edad = document.querySelector("#p_edad span");
