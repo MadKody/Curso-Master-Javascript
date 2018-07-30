@@ -7,10 +7,25 @@
      
     </head>
     <body>
-        <h1>JSON</h1>
+    <form action = "" id = "formularioPeliculas">
+        <h1>Peliculas pendientes de ver</h1>
+        <input type = "text" id = "addpeliculas"/>
+        <button type = "submit">Guardar</button>
+    </form>
+
+    <form action = "" id = "borrarPelicula">
+            <h1>Borra tu pelicula</h1>
+            <input type = "text" id = "borrarPelicula"/>
+            <button type = "submit">Guardar</button>
+    </form>
+
         <div id ="Peliculas">
-            <h2>Peliculas</h2>
+            <h2>Lista</h2>
+            <ul id = "peliculas-list">
+
+            </ul>
         </div>
-        <script type = "text/javascript" src="js/33-json.js"></script>
+
+        <script type = "text/javascript" src="js/35-ejercicio-localstorage.js"></script>
     </body>
 </html>
