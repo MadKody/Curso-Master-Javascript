@@ -94,4 +94,3 @@ function mostrarJanet(user){
 
         document.querySelector('#janet .loading').style.display = 'none'; 
 }
-
