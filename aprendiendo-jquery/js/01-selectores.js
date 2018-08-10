@@ -44,4 +44,12 @@ $('[title = "Google"]').css('background','yellow')
                          .css('color','red');
 $('[title = "Facebook"]').css('background','blue')
                          .css('color','white');
+//otros
+$('p,a').addClass('margen-superior');
+
+//Concepto de busqueda usando el metodo parent de los elementos
+//var busqueda = $('#caja .resaltado').eq(0).parent().find('[title = "Google"]');
+
+var busqueda = $('#elemento2').parent().parent().find('.resaltado');
+console.log(busqueda);
 });

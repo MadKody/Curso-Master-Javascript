@@ -1,0 +1,53 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eventos con JQuery</title>
+
+        <script type="text/javascript" src ="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src ="js/02-eventos.js"></script> 
+        <style>
+            #caja{
+                width: 250px;
+                height: 250px;
+                border: 2px solid black;
+                background: yellow;
+                transition: 300ms all;
+            }
+            input{
+                padding: 10px;
+                width: 300px;
+                font-size: 20px;
+            }
+            #datos{
+                border: 4px dashed black;
+                padding: 10px;
+                width: 250px;
+                height: 50px;
+                margin-top: 10px;
+                display: none;
+            }
+            /*
+            #caja:hover{
+                
+                background:tomato;
+                cursor: pointer;
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <h1>Aprendiendo JQuery con Victor Robles</h1>
+        <form>
+            <input type = 'text' id = 'nombre'></input>
+            <br>
+        </form>
+        <div id = 'datos'>
+
+        </div>
+        <div id = 'caja'>
+            Soy una caja
+        </div>
+    </body>
+</html>
