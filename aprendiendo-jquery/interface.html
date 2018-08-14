@@ -1,0 +1,122 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eventos con JQuery</title>
+
+        <script type="text/javascript" src ="js/jquery-3.3.1.js"></script>
+
+        <link rel = "stylesheet" href = "js/jquery-ui-1.12.1/jquery-ui.min.css" />
+        <link rel = "stylesheet" href = "js/jquery-ui-1.12.1/jquery-ui.structure.min.css" />
+        <link rel = "stylesheet" href = "js/jquery-ui-1.12.1/jquery-ui.theme.min.css" />
+
+        <script type="text/javascript" src ="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src ="js/06-interface.js"></script> 
+        <style>
+            .elemento{
+                width: 300px;
+                height: 200px;
+                border: 4 solid blue;
+                background: lightblue;
+                margin: 20px;
+                float: left;
+            }
+            .lista_seleccionable li{
+                width: 80%;
+                padding: 20px;
+                border: 2px solid black;
+                list-style: none;
+                cursor: pointer;
+            }
+            ul .ui-selecting{
+                background: greenyellow;
+            }
+            ul .ui-selected{background: green;}
+            
+            #elemento_movido{
+                width: 100px;
+                height: 100px;
+                border: 2px solid red;
+            }
+            #area{
+                width: 300px;
+                height: 300px;
+                border: 2px solid blue;
+            }
+            .caja_efectos{
+                width: 300px;
+                height: 200px;
+                background: pink;
+                border: 2px solid black;
+                float: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Aprendiendo JQuery - jQuery UI</h1> <br/>   
+            <h3>Tooltips</h3>
+                <a href="#" title="Acceder a la seccion de tus datos de usuario">Mis datos</a>
+                <a href="#" title="Mira los elementos que tienes actualmente en el carro">Carro</a>
+                <a href="#" title="Conectate con otros clientes">Network</a>
+        <hr/>
+            <h3>Calendario</h3>
+            <input type ="text" id = "calendario"/>
+
+        <hr/>
+
+            <h3>Pestanas</h3>
+                <div id = "pestanas">
+                    <ul>
+                        <li><a href = "#tab-1">Pestana 1</a></li>
+                        <li><a href = "#tab-2">Pestana 2</a></li>
+                        <li><a href = "#tab-3">Pestana 3</a></li>
+                    </ul>
+                    <div id = "tab-1">
+                        Hola yo soy el contenido de la primera pestana
+                    </div>
+                    <div id = "tab-2">
+                        Hola yo soy el contenido de la segunda pestana
+                    </div>
+                    <div id = "tab-3">
+                        Hola yo soy el contenido de la tercera pestana
+                    </div>
+                </div>
+
+        <hr/>
+
+            <h3>Cuadros de dialogo</h3>
+        <button id = "lanzar_popup">Lanzame!</button>
+        
+        <div id = "popup" title="Estas seguro?" style = "display: none">
+            <P>
+                Si continuas con el curso aprenderas JS inevitablemente
+            </P>
+        </div>
+        <hr/>
+
+        <button id = "mostrar">Mostrar</button> <br/>
+
+        <div class="caja_efectos"></div>        <br/>
+
+        <div id = "elemento_movido"></div       ><br/> 
+
+        <div id = "area"> </div>
+
+        <ul class = "lista_seleccionable">
+            <li>Super Mario Bros</li>
+            <li>Final Fantasy VII</li>
+            <li>Time Crisis</li>
+            <li>Dark Souls</li>
+            <li>God of war</li>
+        </ul>
+
+        <div class = "elemento">Hola, soy el elemento numero 1</div>
+
+        <div class = "elemento">Hola, soy el elemento numero 2</div>
+
+        <div class = "elemento">Hola, soy el elemento numero 3</div>
+
+    </body>
+</html>
