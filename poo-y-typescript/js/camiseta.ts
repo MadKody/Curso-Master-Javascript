@@ -1,57 +1,68 @@
-//Clase (molde del objeto)
+// Interface
 interface CamisetaBase{
-    setColor(color);
-    getColor();
+	setColor(color);
+	getColor();
 }
 
+// Decorador
+function estampar(logo: string){
+	return function(target: Function){
+		target.prototype.estampacion = function():void{
+			console.log("Camiseta estampada con el logo de: "+logo);
+		}
+	}
+}
+
+// Clase (molde del objeto)
+@estampar('Gucci Gang')
 class Camiseta implements CamisetaBase{
-    //Propiedades (caracteristicas del objeto) - Public - protected - Private
-    private color: string;
-    private modelo: string;
-    private marca: string;
-    private talla: string;
-    private precio: number;
 
-    //Constructor
-    constructor(color, modelo:string, marca:string, talla:string, precio:number){
-        this.color = color;
-        this.modelo = modelo;
-        this.marca = marca;
-        this.talla = talla;
-        this.precio = precio; 
-    }
+	// Propiedades (caracteristicas del objeto)
+	private color: string;
+	private modelo: string;
+	private marca: string;
+	private talla: string;
+	private precio: number;
 
-    //Metodos(funciones o acciones del objeto)
-    public setColor(color:string){
-        this.color = color;
-    }
-    
-    public getColor(){
-        return this.color;
-    }
+	// Métodos (funciones o acciones del objeto)
+	constructor(color, modelo, marca, talla, precio){
+		this.color = color;
+		this.modelo = modelo;
+		this.marca = marca;
+		this.talla = talla;
+		this.precio = precio;
+	}
+
+	public setColor(color){
+		this.color = color;
+	}
+
+	public getColor(){
+		return this.color
+	}
 
 }
 
-//Clase hija
-
+// Clase hija
 class Sudadera extends Camiseta{
-    public capucha: boolean;
+	public capucha: boolean;
 
-    setCapucha(capucha: boolean){
-        this.capucha = capucha;
-    }
-    
-    getCapucha():boolean{
-        return this.capucha;
-    }
+	setCapucha(capucha: boolean){
+		this.capucha = capucha;
+	}
+
+	getCapucha():boolean{
+		return this.capucha;
+	}
 }
 
 
-var camiseta = new Camiseta ("123","123","123","123",12);
+var camiseta = new Camiseta("fdas","fads","fdas","fas", 12);
 console.log(camiseta);
+camiseta.estampacion();
 
-var sudadera_nike = new Sudadera("Rojo","Manga larga","Nike","L",30);
+var sudadera_nike = new Sudadera("Rojo","Manga Larga", "Nike", "L", 30);
 sudadera_nike.setCapucha(true);
-sudadera_nike.setColor("Verde");
+sudadera_nike.setColor("Gris Jaspeado");
 
 console.log(sudadera_nike);
