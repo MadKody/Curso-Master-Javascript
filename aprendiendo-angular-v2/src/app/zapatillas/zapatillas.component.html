@@ -1,8 +1,7 @@
-<h2>Componente de zapatillas</h2>
-<p>Listado de zapatillas a tener: </p>
+<h2>{{titulo}}</h2>
+
 <ul>
-    <li>Rebbok Classic</li>
-    <li>Nike Simple</li>
-    <li>Air Max</li>
-    <li>Nike Hurache</li>
+    <li *ngFor = 'let deportiva of zapatillas'>
+        {{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+    </li>
 </ul>
